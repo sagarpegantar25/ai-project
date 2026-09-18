@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Applcation\\CustomerSupport.Applcation.csproj": {}
+    "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Applcation\\CustomerSupport.Applcation.csproj": {}
   },
   "projects": {
-    "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Applcation\\CustomerSupport.Applcation.csproj": {
+    "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Applcation\\CustomerSupport.Applcation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Applcation\\CustomerSupport.Applcation.csproj",
+        "projectUniqueName": "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Applcation\\CustomerSupport.Applcation.csproj",
         "projectName": "CustomerSupport.Applcation",
-        "projectPath": "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Applcation\\CustomerSupport.Applcation.csproj",
-        "packagesPath": "C:\\Users\\Sagar Pegantar\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Applcation\\obj\\",
+        "projectPath": "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Applcation\\CustomerSupport.Applcation.csproj",
+        "packagesPath": "C:\\Users\\sagar.pegantar\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Applcation\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Sagar Pegantar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sagar.pegantar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -34,8 +33,8 @@
             "framework": "net10.0",
             "targetAlias": "net10.0",
             "projectReferences": {
-              "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Domain\\CustomerSupport.Domain.csproj": {
-                "projectPath": "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Domain\\CustomerSupport.Domain.csproj"
+              "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Domain\\CustomerSupport.Domain.csproj": {
+                "projectPath": "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Domain\\CustomerSupport.Domain.csproj"
               }
             }
           }
@@ -72,7 +71,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",
@@ -350,20 +349,20 @@
         }
       }
     },
-    "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Domain\\CustomerSupport.Domain.csproj": {
+    "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Domain\\CustomerSupport.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Domain\\CustomerSupport.Domain.csproj",
+        "projectUniqueName": "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Domain\\CustomerSupport.Domain.csproj",
         "projectName": "CustomerSupport.Domain",
-        "projectPath": "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Domain\\CustomerSupport.Domain.csproj",
-        "packagesPath": "C:\\Users\\Sagar Pegantar\\.nuget\\packages\\",
-        "outputPath": "C:\\Projects\\AI\\CustomerSupportSystem\\CustomerSupport.Domain\\obj\\",
+        "projectPath": "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Domain\\CustomerSupport.Domain.csproj",
+        "packagesPath": "C:\\Users\\sagar.pegantar\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\ai\\ai-project\\CustomerSupportSystem\\CustomerSupport.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Sagar Pegantar\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\sagar.pegantar\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -372,7 +371,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -414,7 +412,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.400/PortableRuntimeIdentifierGraph.json",
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json",
           "packagesToPrune": {
             "Microsoft.CSharp": "(,4.7.32767]",
             "Microsoft.VisualBasic": "(,10.4.32767]",

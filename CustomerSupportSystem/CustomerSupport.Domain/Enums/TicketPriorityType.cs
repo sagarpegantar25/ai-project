@@ -1,6 +1,5 @@
 ﻿namespace CustomerSupport.Domain.Enums;
-
-public enum Product
+public enum TicketPriorityType
 {
     Low = 1,
     Medium = 2,
