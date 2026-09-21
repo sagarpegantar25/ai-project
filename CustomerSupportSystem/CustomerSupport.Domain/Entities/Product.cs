@@ -1,5 +1,4 @@
 ﻿namespace CustomerSupport.Domain.Entities;
-
 public sealed class Product : BaseEntity<int>
 {
     public string Name { get; set; } = string.Empty;

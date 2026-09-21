@@ -1,5 +1,4 @@
 ﻿namespace CustomerSupport.Domain.Entities;
-
 public sealed class KnowledgeBaseArticle : BaseEntity<int>
 {
     public string Title { get; set; } = string.Empty;
@@ -10,4 +9,3 @@ public sealed class KnowledgeBaseArticle : BaseEntity<int>
     public byte[] RowVersion { get; set; } = [];
     public Product? Product { get; set; }
 }
-

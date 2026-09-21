@@ -12,7 +12,5 @@ public sealed class User : BaseEntity<int>
     public bool IsActive { get; set; } = true;
     public Role Role { get; set; } = null!;
 
-    public ICollection<RefreshToken> RefreshTokens { get; set; }
-        = new List<RefreshToken>();
+    public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
 }
-

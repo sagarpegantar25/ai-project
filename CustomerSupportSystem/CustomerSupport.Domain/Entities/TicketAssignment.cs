@@ -10,4 +10,3 @@ public sealed class TicketAssignment : BaseEntity<int>
     public User AssignedToUser { get; set; } = null!;
     public User AssignedByUser { get; set; } = null!;
 }
-

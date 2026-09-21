@@ -23,16 +23,8 @@ public sealed class SupportTicket : BaseEntity<int>
     public TicketPriority Priority { get; set; } = null!;
     public TicketStatus Status { get; set; } = null!;
 
-    public ICollection<TicketComment> Comments { get; set; }
-        = new List<TicketComment>();
-
-    public ICollection<TicketAssignment> Assignments { get; set; }
-        = new List<TicketAssignment>();
-
-    public ICollection<TicketAttachment> Attachments { get; set; }
-        = new List<TicketAttachment>();
-
-    public ICollection<TicketHistory> History { get; set; }
-        = new List<TicketHistory>();
+    public ICollection<TicketComment> Comments { get; set; } = new List<TicketComment>();
+    public ICollection<TicketAssignment> Assignments { get; set; } = new List<TicketAssignment>();
+    public ICollection<TicketAttachment> Attachments { get; set; } = new List<TicketAttachment>();
+    public ICollection<TicketHistory> History { get; set; } = new List<TicketHistory>();
 }
-

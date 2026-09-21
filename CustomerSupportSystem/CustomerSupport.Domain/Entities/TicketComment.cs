@@ -1,5 +1,4 @@
 ﻿namespace CustomerSupport.Domain.Entities;
-
 public sealed class TicketComment : BaseEntity<int>
 {
     public int SupportTicketId { get; set; }

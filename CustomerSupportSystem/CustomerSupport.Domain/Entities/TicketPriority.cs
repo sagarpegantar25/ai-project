@@ -1,5 +1,5 @@
-﻿namespace CustomerSupport.Domain.Entities;
-
+﻿using CustomerSupport.Domain.Enums;
+namespace CustomerSupport.Domain.Entities;
 public sealed class TicketPriority : BaseEntity<TicketPriorityType>
 {
     public string Name { get; set; } = string.Empty;

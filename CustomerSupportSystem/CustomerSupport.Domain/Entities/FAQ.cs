@@ -1,5 +1,4 @@
 ﻿namespace CustomerSupport.Domain.Entities;
-
 public sealed class FAQ : BaseEntity<int>
 {
     public string Question { get; set; } = string.Empty;
