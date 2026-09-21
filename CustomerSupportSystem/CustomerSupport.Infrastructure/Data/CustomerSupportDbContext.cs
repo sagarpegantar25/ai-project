@@ -2,17 +2,14 @@
 using CustomerSupport.Domain.Enums;
 using CustomerSupport.Infrastructure.Data.Configurations;
 using Microsoft.EntityFrameworkCore;
-
 namespace CustomerSupport.Infrastructure.Data;
-
 public sealed class CustomerSupportDbContext : DbContext
 {
-    public CustomerSupportDbContext(DbContextOptions<CustomerSupportDbContext> options)
-        : base(options)
-    {
+    public CustomerSupportDbContext(DbContextOptions<CustomerSupportDbContext> options) : base(options)
+    { 
     }
 
-    public DbSet<Role> Roles { get; set; }
+    public DbSet<Role> Roles => Set<Role>();
     public DbSet<User> Users => Set<User>();
     public DbSet<Product> Products => Set<Product>();
     public DbSet<TicketCategory> TicketCategories => Set<TicketCategory>();
@@ -24,7 +21,7 @@ public sealed class CustomerSupportDbContext : DbContext
     public DbSet<TicketAttachment> TicketAttachments => Set<TicketAttachment>();
     public DbSet<TicketHistory> TicketHistories => Set<TicketHistory>();
     public DbSet<KnowledgeBaseArticle> KnowledgeBaseArticles => Set<KnowledgeBaseArticle>();
-    // public DbSet<FAQ> FAQs => Set<FAQ>();
+    public DbSet<FAQ> FAQs => Set<FAQ>();
     public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -227,33 +224,6 @@ public sealed class CustomerSupportDbContext : DbContext
                 Id = 7,
                 Name = "General Query",
                 Description = "General customer questions.",
-                IsActive = true,
-                CreatedAt = seedDate
-            }
-        );
-
-        modelBuilder.Entity<Product>().HasData(
-            new Product
-            {
-                Id = 1,
-                Name = "CRM Application",
-                Description = "CRM Application",
-                IsActive = true,
-                CreatedAt = seedDate
-            },
-            new Product
-            {
-                Id = 2,
-                Name = "ECommerce Application",
-                Description = "ECommerce Application",
-                IsActive = true,
-                CreatedAt = seedDate
-            },
-            new Product
-            {
-                Id = 3,
-                Name = "Accounting Application",
-                Description = "Accounting Application",
                 IsActive = true,
                 CreatedAt = seedDate
             }
