@@ -1,31 +1,50 @@
 using CustomerSupport.Infrastructure.Extensions;
-namespace CustomerSupport.API;
-public class Program
+using CustomerSupport.API.Extensions;
+
+namespace CustomerSupport.API
 {
-    public static void Main(string[] args)
+    public class Program
     {
-        var builder = WebApplication.CreateBuilder(args);
-
-        // Add services to the container.
-        builder.Services.AddControllers();
-        builder.Services.AddOpenApi();
-
-        var connectionString =
-            builder.Configuration.GetConnectionString("CustomerSupportDBConnection")
-            ?? throw new InvalidOperationException("CustomerSupportDBConnection is not configured.");
-
-        builder.Services.AddInfrastructureServices(connectionString);
-
-        var app = builder.Build();
-
-        // Configure the HTTP request pipeline.
-        if (app.Environment.IsDevelopment())
+        public static void Main(string[] args)
         {
-            app.MapOpenApi();
-        }
+            var builder = WebApplication.CreateBuilder(args);
 
-        app.UseHttpsRedirection();
-        app.MapControllers();
-        app.Run();
+            // Add services to the container.
+
+            builder.Services.AddControllers();
+            builder.Services.AddOpenApi();
+
+            var connectionString =
+                builder.Configuration.GetConnectionString("CustomerSupportDBConnection")
+                ?? throw new InvalidOperationException("CustomerSupportDBConnection is not configured.");
+
+            builder.Services.AddInfrastructureServices(connectionString);
+
+            // Register the application's global exception handler.
+            // This allows unhandled exceptions from the application
+            // to be processed by GlobalExceptionHandler.
+            builder.Services.AddGlobalExceptionHandling();
+
+            var app = builder.Build();
+
+            // Configure the HTTP request pipeline.
+            if (app.Environment.IsDevelopment())
+            {
+                app.MapOpenApi();
+            }
+
+            // Add the global exception handling middleware to the HTTP request pipeline.
+            // When an unhandled exception occurs,
+            // ASP.NET Core forwards it to the registered exception handler.
+            app.UseExceptionHandler();
+
+            app.UseHttpsRedirection();
+
+            app.UseAuthorization();
+
+            app.MapControllers();
+
+            app.Run();
+        }
     }
 }
