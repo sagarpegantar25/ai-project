@@ -52,6 +52,12 @@ public sealed class GlobalExceptionHandler : IExceptionHandler
                 message = businessRuleException.Message;
                 break;
 
+            // Used when authentication fails (invalid credentials or tokens).
+            case UnauthorizedException unauthorizedException:
+                statusCode = StatusCodes.Status401Unauthorized;
+                message = unauthorizedException.Message;
+                break;
+
             // Used when the requested resource does not exist.
             case NotFoundException notFoundException:
                 statusCode = StatusCodes.Status404NotFound;
