@@ -161,6 +161,32 @@ namespace CustomerSupport.Infrastructure.Migrations
                         .IsUnique();
 
                     b.ToTable("Products", (string)null);
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2026, 9, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "CRM Application",
+                            IsActive = true,
+                            Name = "CRM Application"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2026, 9, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "ECommerce Application",
+                            IsActive = true,
+                            Name = "ECommerce Application"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2026, 9, 1, 0, 0, 0, 0, DateTimeKind.Utc),
+                            Description = "Accounting Application",
+                            IsActive = true,
+                            Name = "Accounting Application"
+                        });
                 });
 
             modelBuilder.Entity("CustomerSupport.Domain.Entities.RefreshToken", b =>
