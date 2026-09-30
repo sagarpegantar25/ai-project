@@ -24,11 +24,6 @@ namespace CustomerSupport.API
 
             builder.Services.AddInfrastructureServices(connectionString);
 
-            // Register the application's global exception handler.
-            // This allows unhandled exceptions from the application
-            // to be processed by GlobalExceptionHandler.
-            builder.Services.AddGlobalExceptionHandling();
-
             builder.Services.AddApplicationServices();
 
             // Configure JWT Bearer Authentication.
@@ -42,6 +37,21 @@ namespace CustomerSupport.API
             // It enables ASP.NET Core to authenticate requests containing:
             // Authorization: Bearer <access-token>
             builder.Services.AddJwtAuthentication(builder.Configuration);
+
+            // Register Authorization and Current User services.
+            // This extension method registers:
+            // - ASP.NET Core Authorization
+            // - IHttpContextAccessor
+            // - ICurrentUserService -> CurrentUserService
+
+            // CurrentUserService allows the Application layer
+            // to access the authenticated User's:
+            // - UserId
+            // - FullName
+            // - Email
+            // - Role
+            // without directly depending on HttpContext.
+            builder.Services.AddApiAuthorization();
 
             var app = builder.Build();
 
@@ -70,12 +80,6 @@ namespace CustomerSupport.API
                     options.RoutePrefix = "swagger";
                 });
             }
-
-            // Add the global exception handling middleware to the HTTP request pipeline.
-            // When an unhandled exception occurs,
-            // ASP.NET Core forwards it to the registered exception handler.
-            app.UseExceptionHandler();
-
 
             app.UseHttpsRedirection();
 
